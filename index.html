@@ -4,7 +4,9 @@
     <title>Asad Ahmed</title>
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>
+  <body class="dark">
+    <!-- Add a toggle button to switch between dark and light mode -->
+    <button id="toggle-button" onclick="toggleDarkLight()">Toggle Dark/Light Mode</button>
     <header>
       <h1>Asad Ahmed's Portfolio</h1>
       <nav>
@@ -27,5 +29,13 @@
     <footer>
       <p>Copyright 2023 Asad Ahmed</p>
     </footer>
+    <!-- Add a JavaScript function to toggle between dark and light mode -->
+    <script>
+      function toggleDarkLight() {
+        var body = document.getElementsByTagName("body")[0];
+        var currentClass = body.className;
+        body.className = currentClass == "dark" ? "light" : "dark";
+      }
+    </script>
   </body>
 </html>
